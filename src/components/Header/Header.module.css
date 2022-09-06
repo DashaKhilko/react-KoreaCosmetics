@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .headerLeft {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header img {
+      margin: 0 15px 0 0;
+  }
+  
+  .headerRight{
+    display: flex;
+  }
+  
+  .headerTitle{
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .headerText{
+    opacity: 0.5;
+    margin: 0;
+  }
+  .headerList{
+    cursor: pointer;
+  }
