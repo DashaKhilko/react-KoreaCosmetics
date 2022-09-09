@@ -112,6 +112,33 @@
     position: absolute;
     transition: transform 0.15s ease-in-out;
     right: 30px;
-    top: 18px;
+    top: 20px;
+  }
+
+  .emptyCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .emptyCartText{
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .emptyCartImage{
+    margin-bottom: 30px;
   }
   
+  .emptyCart .cartButton img{
+    transform: rotate(180deg);
+    transition: transform 0.15s ease-in-out;
+    top: 18px;
+    left: 30px;
+  }
+
+  .emptyCart .cartButton:hover img{
+    transform: rotate(180deg) translateX(3px);
+  }

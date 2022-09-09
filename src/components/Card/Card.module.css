@@ -13,13 +13,22 @@
     margin: 0 30px 30px 0;
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
+  .imageFavorite{
+    height: 30px;
+    width: 30px;
+    left: 175px;
+    top: 1305px;
+    border-radius: 7px;
+    border: 1px solid  #eaeaea;
+
+  }
   .imageItem{
     display: block;
     margin-left: auto;
     margin-right: auto
   }
   .card:hover{
-    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 35px rgba(182, 0, 76, 0.2);
     transform: translateY(-5px);
   }
   
@@ -35,6 +44,7 @@
   }
   
   .card h5 {
+    text-align: center;
     flex: 1;
     font-weight: 400;
     font-size: 14px;

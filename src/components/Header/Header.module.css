@@ -8,10 +8,15 @@ header {
   .headerLeft {
     padding: 40px;
     display: flex;
-    align-items: center;
+    align-items: center; 
+  }
+
+  a {
+    text-decoration:none;
+    color: inherit;
   }
   
-  header img {
+  .headerLeft img {
       margin: 0 15px 0 0;
   }
   
@@ -24,7 +29,7 @@ header {
     margin: 0;
   }
   .headerText{
-    opacity: 0.5;
+    opacity: 0.6;
     margin: 0;
   }
   .headerList{

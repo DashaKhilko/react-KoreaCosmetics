@@ -1,22 +1,30 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header({onClickCart}) {
     return (
         <header>
-        <div className={styles.headerLeft}>
-          <img width={40} height={40} src="/img/logo.png" alt="" />
-          <div>
-            <h3 className={styles.headerTitle}>KOREA_BY</h3>
-            <p className={styles.headerText}>Магазин корейской косметики</p>
+        <Link to="/">
+          <div className={styles.headerLeft}>
+            <img width={50} height={50} src="/img/logo.png" alt="LogoType" />
+            <div>
+              <h3 className={styles.headerTitle}>KOREA_BY</h3>
+              <p className={styles.headerText}>Магазин корейской косметики</p>
+            </div>
           </div>
-        </div>
+        </Link>
         <ul  className={styles.headerRight}>
           <li onClick={onClickCart} className={styles.headerList}>
-            <img width={18} height={18} src="/img/cart.png" alt="" />
-            <span>399 руб.</span>
+            <img width={28} height={25} src="/img/cart.svg" alt="Cart" />
+            <span className={styles.headerText}>399 руб.</span>
+          </li>
+          <li className={styles.headerList}>
+            <Link to="/favorites">
+              <img width={28} height={25} src="/img/heart.svg" alt="Favorites" /> 
+            </Link>
           </li>
           <li>
-          <img width={20} height={20} src="/img/user.png" alt="" /> 
+          <img width={30} height={28} src="/img/user.svg" alt="User" /> 
           </li>
         </ul>
       </header>
@@ -24,3 +32,4 @@ function Header({onClickCart}) {
 }
 
 export default Header;
+

@@ -3,10 +3,11 @@
 }
 
 body {
+  overflow-y: scroll;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:  #E7F6FF;
+  background-color:  rgba(255, 0, 106, 0.1);
 }
 
 .wrapper {
@@ -37,10 +38,20 @@ body {
 }
 
 .searchBlock{
+  position: relative;
   border: 1px solid #f3f3f3;
   display: flex;
   border-radius: 10px;
   padding: 0 15px;
+  margin: 0 30px 0 0;
+}
+
+.imgRemove{
+  position: absolute;
+  right: 15px;
+  height: 23px;
+  width: 23px;
+  top: 11px;
 }
 
 .searchBlock input{
@@ -48,6 +59,7 @@ body {
   padding: 13px;
   font-size: 16px;
   width: 200px;
+  outline: none;
 }
 
 .products{
