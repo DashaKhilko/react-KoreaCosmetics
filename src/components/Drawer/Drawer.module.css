@@ -16,14 +16,13 @@
     right: 0;
     height: 100%;
     background: #ffffff;
+    padding: 0 30px;
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-    padding: 30px;
   }
   
   .drawer h2 {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 30px 0;
   }
   
   .items{
@@ -87,7 +86,7 @@
   
   .cartButton{
     position: relative;
-    margin: 30px 0 0 0;
+    margin: 30px 0 30px 0;
     width: 100%;
     height: 55px;
     background-color: #9dd558;
@@ -100,6 +99,11 @@
     transition: background-color 0.2s ease-in-out;
   }
   
+  .cartButton:disabled{
+    background-color: #bebebe;
+    cursor: default;
+    animation: buttonLoading 0.6s ease-in-out infinite;
+  }
   .cartButton:hover{
    background-color: rgb(255, 73, 73);
   }
@@ -142,3 +146,15 @@
   .emptyCart .cartButton:hover img{
     transform: rotate(180deg) translateX(3px);
   }
+
+@keyframes buttonLoading {
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}

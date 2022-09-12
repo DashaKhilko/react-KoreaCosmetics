@@ -1,8 +1,8 @@
 import Card from '../components/Card';
 
+
 function  Home ({
   items, 
-  cartItems,
   searchValue, 
   setSearchValue, 
   onChangeSearchInput, 
@@ -18,12 +18,11 @@ function  Home ({
           key={item.title}    
           onFavorite={(obj)=>onAddToFavorites(obj)}
           onPlus={(obj) => onAddToCart(obj)}
-          added={cartItems.some(obj => Number(obj.id) === Number(item.id))}
           loading={isLoading}
           {...item}
           />))
-  }
-  return(
+    }
+    return(
 
     <div className="content">
         <div className="contentTitle">
