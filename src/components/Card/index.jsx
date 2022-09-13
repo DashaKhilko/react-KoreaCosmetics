@@ -17,13 +17,14 @@ function Card ({
 
   const {isItemAdded} = useContext(AppContext);
   const[isFavorite, setIsFavorite] = useState(favorited);
+  const obj = {id, parentId : id, title, price, image};
 
   const onClickFavorite = () => {
-    onFavorite({id, title, price, image});
+    onFavorite(obj);
     setIsFavorite(!isFavorite)
   }
   const onClickPlus =() => {
-    onPlus({id, title, price, image});
+    onPlus(obj);
   }
     return(
         <div className={styles.card}>

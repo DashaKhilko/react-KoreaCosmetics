@@ -6,6 +6,19 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, visibility opacity 0.1s ease-in-out;
+  }
+
+  .overlayVisible{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .overlayVisible .drawer{
+    transform: translateX(0);
   }
   
   .drawer{
@@ -18,6 +31,9 @@
     background: #ffffff;
     padding: 0 30px;
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+
   }
   
   .drawer h2 {
@@ -135,7 +151,7 @@
   .emptyCartImage{
     margin-bottom: 30px;
   }
-  
+
   .emptyCart .cartButton img{
     transform: rotate(180deg);
     transition: transform 0.15s ease-in-out;

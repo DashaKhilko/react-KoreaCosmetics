@@ -6,10 +6,10 @@ import { useCart } from '../../hook/useCart';
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-function Drawer({onClose, onRemoveCart, items=[]}) {
+function Drawer({onClose, onRemoveCart, opened , items=[]}) {
 
   const {cartItems, setCartItems, totalPrice} = useCart();
-  const [orderId, setOderId] = useState(null);
+  const [orderId, setOderId] = useState([]);
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,14 +27,14 @@ function Drawer({onClose, onRemoveCart, items=[]}) {
         await delay(1000);
       }
   
-    } catch(error)   {
+    } catch(error) {
       alert('Ошибка при создании заказа :(')
     }
     setIsLoading(false);
   }
 
     return(
-      <div className={styles.overlay}>
+      <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ""}`}>
         <div className={styles.drawer}>
           <h2>Корзина
             <img onClick={onClose} className={styles.imgRemove} src="/img/btn-remove.svg" alt="Close" />
