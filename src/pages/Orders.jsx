@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useContext } from 'react';
 import AppContext from '../context';
 import Card from '../components/Card';
+import Emptiness from '../components/Emptiness';
 
 function Orders () {
     
@@ -31,14 +32,12 @@ function Orders () {
         </div> 
         <div>
             <div className="products">
-            {(isLoading ? Array(6).fill({}) : orders).map(item => 
-                    <Card 
-                        key={item.title}    
-                        loading={isLoading}
-                        {...item}
-                    />)}
+            {(isLoading ? Array(3).fill({}) : orders).map(item => 
+                <Card key={item.title} loading={isLoading} {...item}/>)}
+            {!isLoading && !orders.length &&  <Emptiness 
+                title={"У вас нет приобретенных товаров"}
+                image={"/img/sad-emoticon2.svg"}/>}
             </div>
-          
         </div>
     </div>
     )

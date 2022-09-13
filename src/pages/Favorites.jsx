@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import Card from '../components/Card';
+import Card from '../components/Card'; 
 import AppContext from '../context';
+import Emptiness from '../components/Emptiness';
 
 function Favorites () {
 
@@ -13,7 +14,7 @@ function Favorites () {
           <h1> Мои закладки </h1>
         </div> 
         <div>
-        <div className="products">
+          <div className="products">
           {favorites.map(item => 
                 <Card 
                 key={item.id}    
@@ -21,8 +22,10 @@ function Favorites () {
                 onFavorite={onAddToFavorites}
                 {...item}
                 />)}
-        </div>
-          
+            {!favorites.length &&  <Emptiness 
+                title={"Вы ничего не добавляли в закладки"}
+                image={"/img/sad-emoticon1.svg"}/>}
+          </div>
         </div>
     </div>
     )
