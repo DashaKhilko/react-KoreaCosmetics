@@ -16,15 +16,15 @@ function Favorites () {
         <div>
           <div className="products">
           {favorites.map(item => 
-                <Card 
-                key={item.id}    
-                favorited={true}
-                onFavorite={onAddToFavorites}
-                {...item}
-                />)}
-            {!favorites.length &&  <Emptiness 
-                title={"Вы ничего не добавляли в закладки"}
-                image={"/img/sad-emoticon1.svg"}/>}
+              <Card 
+              key={item.id}    
+              favorited={true}
+              onFavorite={onAddToFavorites}
+              {...item}
+              />)}
+          {!favorites.length && <Emptiness 
+              title={"Вы ничего не добавляли в закладки"}
+              image={"/img/sad-emoticon1.svg"}/>}
           </div>
         </div>
     </div>
