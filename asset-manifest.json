@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DashaKhilko/react-KoreaCosmetics.git/static/css/main.4a566cb4.css",
+    "main.js": "/DashaKhilko/react-KoreaCosmetics.git/static/js/main.8fa2fffa.js",
+    "index.html": "/DashaKhilko/react-KoreaCosmetics.git/index.html",
+    "main.4a566cb4.css.map": "/DashaKhilko/react-KoreaCosmetics.git/static/css/main.4a566cb4.css.map",
+    "main.8fa2fffa.js.map": "/DashaKhilko/react-KoreaCosmetics.git/static/js/main.8fa2fffa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a566cb4.css",
+    "static/js/main.8fa2fffa.js"
+  ]
+}
