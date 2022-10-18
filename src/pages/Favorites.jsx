@@ -5,7 +5,7 @@ import Emptiness from '../components/Emptiness';
 
 function Favorites () {
 
-  const {favorites, onAddToFavorites} = useContext(AppContext);
+  const {favorites, onRemoveFavorites} = useContext(AppContext);
 
   return(
 
@@ -15,11 +15,11 @@ function Favorites () {
         </div> 
         <div>
           <div className="products">
-          {favorites.map(item => 
+          {favorites.map((item, index) => 
               <Card 
-              key={item.id}    
-              favorited={true}
-              onFavorite={onAddToFavorites}
+              key={index}
+              onFavorite={onRemoveFavorites}
+              isFromFavorites={true}
               {...item}
               />)}
           {!favorites.length && <Emptiness 

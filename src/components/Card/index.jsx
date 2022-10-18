@@ -11,17 +11,16 @@ function Card ({
   image, 
   onFavorite, 
   onPlus, 
-  favorited=false, 
-  loading=false
+  loading=false,
+  isFromFavorites=false
   }) {
 
-  const {isItemAdded} = useContext(AppContext);
-  const[isFavorite, setIsFavorite] = useState(favorited);
+  const {isItemAdded,isItemLiked} = useContext(AppContext);
   const obj = {id, parentId : id, title, price, image};
 
   const onClickFavorite = () => {
     onFavorite(obj);
-    setIsFavorite(!isFavorite)
+   
   }
   const onClickPlus =() => {
     onPlus(obj);
@@ -45,14 +44,16 @@ function Card ({
             </ContentLoader>
           
             : <>
+              
+              <img className={styles.imageItem} width={250} height={250} src={image} alt="Products" />
               { onFavorite &&
-                <div className={styles.favorite} onClick={onClickFavorite}>
+                <div className={styles.favorite}>
                 <img
+                  onClick={onClickFavorite}
                   width={25}
                   height={23} 
-                  src={isFavorite ? "/img/liked.png" : "/img/unliked.png"}  alt="Unliked" />
+                  src={isItemLiked(id, isFromFavorites) ? "/img/liked.png" : "/img/unliked.png"}  alt="Unliked" />
               </div>}
-              <img className={styles.imageItem} width={250} height={250} src={image} alt="Products" />
               <h5>{title}</h5>
                 <div className={styles.cardBottom}>
                     <div className={styles.cardPrice}>

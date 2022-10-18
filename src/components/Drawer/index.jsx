@@ -45,7 +45,7 @@ function Drawer({onClose, onRemoveCart, opened , items=[]}) {
             ? <>
                 <div className={styles.items}>
                 {items.map(obj => (
-                  <div key={obj.id} className={styles.cartItem}>
+                  <div key={obj.parentId} className={styles.cartItem}>
                     <img className={styles.cartImage} width={70} height={70} src={obj.image} alt="Products" />
                     <div className={styles.cartText}>
                       <p className={styles.cartDescription}>{obj.title}</p>

@@ -1,176 +1,176 @@
 .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    visibility: hidden;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out, visibility opacity 0.1s ease-in-out;
-  }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out, visibility opacity 0.1s ease-in-out;
+}
 
-  .overlayVisible{
-    visibility: visible;
-    opacity: 1;
-  }
+.overlayVisible{
+  visibility: visible;
+  opacity: 1;
+}
 
-  .overlayVisible .drawer{
-    transform: translateX(0);
-  }
-  
-  .drawer{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 420px;
-    right: 0;
-    height: 100%;
-    background: #ffffff;
-    padding: 0 30px;
-    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
+.overlayVisible .drawer{
+  transform: translateX(0);
+}
 
-  }
-  
-  .drawer h2 {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .items{
-    flex: 1;
-    overflow: auto;
-  }
-  
-  .cartItem {
-    border: 1px solid #f3f3f3;;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 0 0 20px 0;
-  } 
-  
-  .cartDescription{
-    font-size: 16px;
-    margin: 0;
-    padding: 0 0 10px 0;
-  }
-  
-  .cartText{
-    margin-bottom: 5px;
-  } 
-  
-  .cartPrice{
-    font-size: 14px;
-  }
-  
-  .cartImage{
-    margin: 0 20px 20px 0;
-  }
-  
-  .imgRemove{
-    padding: 0 0 0 10px;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: opacity 0.15s ease-in-out;
-  }
-  
-  .imgRemove:hover{
-    opacity: 1;
-  } 
-  
-  .cartList li{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 20px;
-  }
-  
-  .cartList div{
-    flex: 1;
-    height: 1px;
-    border-bottom: 1px dashed #dfdfdf;
-    position: relative;
-    top: -4px;
-    margin: 0 7px;
-  }
-  
-  .cartButton{
-    position: relative;
-    margin: 30px 0 30px 0;
-    width: 100%;
-    height: 55px;
-    background-color: #9dd558;
-    border-radius: 18px;
-    border: 0;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .cartButton:disabled{
-    background-color: #bebebe;
-    cursor: default;
-    animation: buttonLoading 0.6s ease-in-out infinite;
-  }
-  .cartButton:hover{
-   background-color: rgb(255, 73, 73);
-  }
-  
-  .cartButton:hover img{
-    transform: translateX(5px);
-  }
-  
-  .cartButton img{
-    position: absolute;
-    transition: transform 0.15s ease-in-out;
-    right: 30px;
-    top: 20px;
-  }
+.drawer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+  right: 0;
+  height: 100%;
+  background: #ffffff;
+  padding: 0 30px;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
 
-  .emptyCart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex: 1;
-  }
+}
 
-  .emptyCartText{
-    opacity: 0.6;
-    text-align: center;
-  }
+.drawer h2 {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .emptyCartImage{
-    margin-bottom: 30px;
-  }
+.items{
+  flex: 1;
+  overflow: auto;
+}
 
-  .emptyCart .cartButton img{
-    transform: rotate(180deg);
-    transition: transform 0.15s ease-in-out;
-    top: 18px;
-    left: 30px;
-  }
+.cartItem {
+  border: 1px solid #f3f3f3;;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 0 0 20px 0;
+} 
 
-  .emptyCart .cartButton:hover img{
-    transform: rotate(180deg) translateX(3px);
-  }
+.cartDescription{
+  font-size: 16px;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.cartText{
+  margin-bottom: 5px;
+} 
+
+.cartPrice{
+  font-size: 14px;
+}
+
+.cartImage{
+  margin: 0 20px 20px 0;
+}
+
+.imgRemove{
+  padding: 0 0 0 10px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.imgRemove:hover{
+  opacity: 1;
+} 
+
+.cartList li{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.cartList div{
+  flex: 1;
+  height: 1px;
+  border-bottom: 1px dashed #dfdfdf;
+  position: relative;
+  top: -4px;
+  margin: 0 7px;
+}
+
+.cartButton{
+  position: relative;
+  margin: 30px 0 30px 0;
+  width: 100%;
+  height: 55px;
+  background-color: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cartButton:disabled{
+  background-color: #bebebe;
+  cursor: default;
+  animation: buttonLoading 0.6s ease-in-out infinite;
+}
+.cartButton:hover{
+  background-color: rgb(255, 73, 73);
+}
+
+.cartButton:hover img{
+  transform: translateX(5px);
+}
+
+.cartButton img{
+  position: absolute;
+  transition: transform 0.15s ease-in-out;
+  right: 30px;
+  top: 20px;
+}
+
+.emptyCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.emptyCartText{
+  opacity: 0.6;
+  text-align: center;
+}
+
+.emptyCartImage{
+  margin-bottom: 30px;
+}
+
+.emptyCart .cartButton img{
+  transform: rotate(180deg);
+  transition: transform 0.15s ease-in-out;
+  top: 18px;
+  left: 30px;
+}
+
+.emptyCart .cartButton:hover img{
+  transform: rotate(180deg) translateX(3px);
+}
 
 @keyframes buttonLoading {
-  0% {
-    opacity: 1;
-  }
-  50%{
-    opacity: 0.5;
-  }
-  100%{
-    opacity: 1;
-  }
+0% {
+  opacity: 1;
+}
+50%{
+  opacity: 0.5;
+}
+100%{
+  opacity: 1;
+}
 }
