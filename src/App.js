@@ -233,7 +233,7 @@ function App() {
         <Header onClickCart={() => setCartOpened(true)} />
 
         <Routes>
-          <Route path="/" element={<Home 
+          <Route path="/react-KoreaCosmetics" element={<Home 
               onChangeSearchInput={onChangeSearchInput} 
               setSearchValue={setSearchValue} 
               searchValue={searchValue} />}
@@ -241,12 +241,12 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/favorites" element={<Favorites />}
+          <Route path="/react-KoreaCosmetics/favorites" element={<Favorites />}
           />
         </Routes>
 
         <Routes>
-          <Route path="/orders" element={<Orders />}
+          <Route path="/react-KoreaCosmetics/orders" element={<Orders />}
           />
         </Routes>
       </div>

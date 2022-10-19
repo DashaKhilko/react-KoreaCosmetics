@@ -8,7 +8,7 @@ function Header({onClickCart}) {
 
     return (
         <header>
-        <Link to="/">
+        <Link to="/react-KoreaCosmetics">
           <div className={styles.headerLeft}>
             <img width={50} height={50} src="/img/logo.png" alt="LogoType" />
             <div>
@@ -23,12 +23,12 @@ function Header({onClickCart}) {
             <span className={styles.headerText}>{totalPrice} руб.</span>
           </li>
           <li className={styles.headerList}>
-            <Link to="/favorites">
+            <Link to="/react-KoreaCosmetics/favorites">
               <img className={styles.imageCart} width={28} height={25} src="/img/heart.svg" alt="Favorites" /> 
             </Link>
           </li>
           <li>
-            <Link to="/orders">
+            <Link to="/react-KoreaCosmetics/orders">
               <img width={30} height={28} src="/img/user.svg" alt="User" /> 
             </Link>
           </li>
