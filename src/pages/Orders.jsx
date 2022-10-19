@@ -32,7 +32,7 @@ function Orders () {
                 <Card key={index} loading={isLoading} {...item}/>)}
             {!isLoading && !orders.length &&  <Emptiness 
                 title={"У вас нет приобретенных товаров"}
-                image={"/img/sad-emoticon2.svg"}/>}
+                image={"img/sad-emoticon2.svg"}/>}
             </div>
         </div>
     </div>

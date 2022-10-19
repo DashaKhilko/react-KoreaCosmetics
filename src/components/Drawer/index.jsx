@@ -37,7 +37,7 @@ function Drawer({onClose, onRemoveCart, opened , items=[]}) {
       <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ""}`}>
         <div className={styles.drawer}>
           <h2>Корзина
-            <img onClick={onClose} className={styles.imgRemove} src="/img/btn-remove.svg" alt="Close" />
+            <img onClick={onClose} className={styles.imgRemove} src="img/btn-remove.svg" alt="Close" />
           </h2>
 
           {
@@ -51,7 +51,7 @@ function Drawer({onClose, onRemoveCart, opened , items=[]}) {
                       <p className={styles.cartDescription}>{obj.title}</p>
                       <b className={styles.cartPrice}>{obj.price} руб.</b>
                     </div>
-                    <img onClick={() => onRemoveCart(obj.id)} className={styles.imgRemove} src="/img/btn-remove.svg" alt="Remove" />
+                    <img onClick={() => onRemoveCart(obj.id)} className={styles.imgRemove} src="img/btn-remove.svg" alt="Remove" />
                   </div>
                   ))
                 }
@@ -70,12 +70,12 @@ function Drawer({onClose, onRemoveCart, opened , items=[]}) {
                     </li>
                   </ul>
                   <button disabled={isLoading} onClick={onClickOrder} className={styles.cartButton} >Оформить заказ
-                    <img width={18} height={18} src="/img/arrow.svg" alt="Arrow" />
+                    <img width={18} height={18} src="img/arrow.svg" alt="Arrow" />
                   </button>
                 </div>
               </>
             : <Info title ={isOrderComplete ? "Заказ оформлен" : "Корзина пуста"}
-                    image={isOrderComplete ? "/img/complete-order.jpg" : "/img/empty-cart.jpg"}
+                    image={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
                     description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы один продукт, чтобы сделать заказ"} 
                     />
           }           

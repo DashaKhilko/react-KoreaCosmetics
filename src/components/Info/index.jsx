@@ -11,7 +11,7 @@ const {setCartOpened} = useContext(AppContext);
         <h2>{title}</h2>
         <p className={styles.emptyCartText}>{description}</p>
         <button onClick={() => setCartOpened(false)} className={styles.cartButton}>
-            <img width={18} height={18} src="/img/arrow.svg" alt="Arrow" />Вернуться назад
+            <img width={18} height={18} src="img/arrow.svg" alt="Arrow" />Вернуться назад
         </button>
     </div>
   )

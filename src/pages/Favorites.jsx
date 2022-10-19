@@ -24,7 +24,7 @@ function Favorites () {
               />)}
           {!favorites.length && <Emptiness 
               title={"Вы ничего не добавляли в закладки"}
-              image={"/img/sad-emoticon1.svg"}/>}
+              image={"img/sad-emoticon1.svg"}/>}
           </div>
         </div>
     </div>
