@@ -8,7 +8,7 @@ function Header({onClickCart}) {
 
     return (
         <header>
-        <Link to="/react-KoreaCosmetics">
+        <Link to="/react-KoreaCosmetics/">
           <div className={styles.headerLeft}>
             <img width={50} height={50} src="/img/logo.png" alt="LogoType" />
             <div>

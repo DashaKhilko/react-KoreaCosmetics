@@ -233,7 +233,7 @@ function App() {
         <Header onClickCart={() => setCartOpened(true)} />
 
         <Routes>
-          <Route path="/react-KoreaCosmetics" element={<Home 
+          <Route path="/react-KoreaCosmetics/" element={<Home 
               onChangeSearchInput={onChangeSearchInput} 
               setSearchValue={setSearchValue} 
               searchValue={searchValue} />}
