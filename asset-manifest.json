@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-KoreaCosmetics/static/css/main.b6d18f83.css",
-    "main.js": "/react-KoreaCosmetics/static/js/main.0b0eaf21.js",
+    "main.js": "/react-KoreaCosmetics/static/js/main.e0ae894b.js",
     "index.html": "/react-KoreaCosmetics/index.html",
     "main.b6d18f83.css.map": "/react-KoreaCosmetics/static/css/main.b6d18f83.css.map",
-    "main.0b0eaf21.js.map": "/react-KoreaCosmetics/static/js/main.0b0eaf21.js.map"
+    "main.e0ae894b.js.map": "/react-KoreaCosmetics/static/js/main.e0ae894b.js.map"
   },
   "entrypoints": [
     "static/css/main.b6d18f83.css",
-    "static/js/main.0b0eaf21.js"
+    "static/js/main.e0ae894b.js"
   ]
 }
